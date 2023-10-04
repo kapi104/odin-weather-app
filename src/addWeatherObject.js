@@ -8,10 +8,9 @@ const currentFactory = (current) => {
   const icon = current.condition.icon;
   const windSpeed = current.wind_kph;
   const pressure = current.pressure_mb;
-  const cloud = current.cloud;
   const humidity = current.humidity;
   const feelsLike = current.feelslike_c;
-  return { temp, icon, windSpeed, pressure, cloud, humidity, feelsLike };
+  return { temp, icon, windSpeed, pressure, humidity, feelsLike };
 };
 
 const forecastFactory = (forecastData) => {
@@ -38,7 +37,7 @@ const forecastFactory = (forecastData) => {
 
 const weatherFactory = (weather) => {
   const location = weather.location.name;
-  const localHour = getLocalHour(weather.location.localtime);
+  const localHour = weather.location.localtime;
 
   const current = currentFactory(weather.current);
 
