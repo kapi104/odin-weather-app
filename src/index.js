@@ -1,6 +1,6 @@
 import './style.css';
 import moment from 'moment';
 
-import getApiData from './getDataFromApi';
+import getCurrentWeatherData from './getDataFromApi';
 
-getApiData('london');
+getCurrentWeatherData('london');
