@@ -2,19 +2,16 @@
 
 const getCurrentWeatherData = async (city) => {
   try {
-    let data = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=e3ed4efcf7394dceab5183635231909&q=${city}&aqi=no`,
+    const data = await fetch(
+      `http://api.weatherapi.com/v1/forecast.json?key=e3ed4efcf7394dceab5183635231909&q=${city}&days=3&aqi=no&alerts=no`,
       { mode: 'cors' },
-    );
+    )
 
-    data = await data.json();
+    const weather = await data.json();
 
-    console.log(data);
-
-    return data;
-
+    return weather;
   } catch (error) {
-    console.log('connection error');
+    console.log(error);
   }
 };
 
