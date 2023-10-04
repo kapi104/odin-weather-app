@@ -4,8 +4,8 @@ import moment from 'moment';
 import getCurrentWeatherData from './getDataFromApi';
 import weatherFactory from './addWeatherObject';
 
-document.addEventListener("DOMContentLoaded", async () => {
+document.addEventListener('DOMContentLoaded', async () => {
   const weatherData = await getCurrentWeatherData('london');
-  const weather = weatherFactory(weatherData)
+  const weather = weatherFactory(weatherData);
   console.log(weather);
-})
+});
