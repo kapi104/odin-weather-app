@@ -5,6 +5,28 @@
   color: #eeeeee;
 }
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #64ccc5 #176b87;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #176b87;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #64ccc5;
+    border-radius: 10px;
+    border: 3px solid #176b87;
+  }
+
 body {
   background-color: #053b50;
   overflow: hidden;
@@ -31,12 +53,6 @@ main {
   box-sizing: border-box;
   align-items: center;
   padding: 6rem 0 8em 0;
-}
-
-aside {
-  background-color: #176b87;
-  flex: 2 1 500px;
-  scrollbar-gutter: stable both-edges;
 }
 
 @media (max-width: 1200px) {
@@ -139,4 +155,19 @@ form {
 
 .search input[type='submit']:hover {
   transform: scale(1.1);
+}
+
+
+aside {
+  background-color: #176b87;
+  flex: 2 1 500px;
+  scrollbar-gutter: stable both-edges;
+  display: flex;
+  justify-content: space-evenly;
+  overflow-y: auto;
+
+}
+
+.day {
+  background-color: #64ccc5;
 }
