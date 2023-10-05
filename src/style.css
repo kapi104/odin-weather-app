@@ -176,17 +176,21 @@ aside {
   border-bottom: #64ccc5 2px solid;
 }
 
-.dayforecast .icon {
-  margin: -0.5em;
-}
-
 .hour {
   margin-top: 1rem;
+  padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 1.4rem;
+  position: relative;
 }
 
-.hour .icon {
-  margin: -1em 0;
+.hour:not(.hour:last-of-type)::after {
+  content: '';
+  background-color: #64ccc5;
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 70%;
 }
