@@ -144,7 +144,7 @@ form {
   width: 100%;
 }
 
-.search input[type='submit'] {
+.searchBtn {
   background-image: url(magnify.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -154,8 +154,12 @@ form {
   transition: transform 0.05s;
 }
 
-.search input[type='submit']:hover {
+.searchBtn:hover {
   transform: scale(1.1);
+}
+
+.load {
+  background-image: url(loading.svg);
 }
 
 aside {
@@ -244,4 +248,18 @@ aside {
 
 .disableInputs * {
   pointer-events: none;
+}
+
+.toggleLoading {
+  background-image: url(loading.svg);
+  animation: loading infinite 0.5s;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

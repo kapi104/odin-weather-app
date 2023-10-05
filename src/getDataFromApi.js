@@ -1,4 +1,5 @@
 import handleError from './handleErrors';
+import removeAside from './deleteDOMElements';
 
 const getCurrentWeatherData = async (city) => {
   try {
@@ -15,6 +16,7 @@ const getCurrentWeatherData = async (city) => {
     const weather = await data.json();
 
     if (ResponseCode === 200) {
+      removeAside();
       return weather;
     } else {
       handleError(ResponseCode);
