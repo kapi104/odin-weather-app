@@ -162,10 +162,31 @@ aside {
   flex: 2 1 500px;
   scrollbar-gutter: stable both-edges;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   overflow-y: auto;
 }
 
-.day {
-  background-color: #64ccc5;
+.dayforecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: #64ccc5 2px solid;
+}
+
+.dayforecast .icon {
+  margin: -0.5em;
+}
+
+.hour {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hour .icon {
+  margin: -1em 0;
 }

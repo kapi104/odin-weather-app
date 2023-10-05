@@ -1,3 +1,7 @@
+const displayForecastData = (weather) => {
+
+}
+
 const displayCurrentWeather = (weather) => {
   document.querySelector('.city').innerHTML = weather.location
   document.querySelector('.localTime').innerHTML = weather.localHour
@@ -12,6 +16,7 @@ const displayCurrentWeather = (weather) => {
 
 const displayData = (weather) => {
   displayCurrentWeather(weather);
+  displayForecastData(weather.forecast)
 };
 
 export default displayData;
