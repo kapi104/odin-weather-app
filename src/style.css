@@ -39,6 +39,7 @@ body {
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .container > * {
@@ -193,4 +194,50 @@ aside {
   bottom: 0;
   height: 1px;
   width: 70%;
+}
+
+.alertBox {
+  padding: 1rem;
+  background-color: #eeeeee;
+  border: #64ccc5 4px solid;
+  position: absolute;
+  height: max-content;
+  width: 400px;
+  color: #053b50;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+}
+
+.head {
+  font-size: 2rem;
+}
+
+.alertBox > button {
+  background-color: #053b50;
+  color: #eeeeee;
+  border: 0;
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  float: right;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.alertBox > button:hover {
+  background-color: #176b87;
+}
+
+.message {
+  margin-bottom: 0.6rem;
+}
+
+.invisible {
+  display: none;
 }
