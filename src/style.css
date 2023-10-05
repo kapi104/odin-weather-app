@@ -253,7 +253,6 @@ aside {
 .toggleLoading {
   background-image: url(loading.svg);
   animation: loading infinite 0.5s;
-  color:;
 }
 
 @keyframes loading {
