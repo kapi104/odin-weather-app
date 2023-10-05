@@ -20,7 +20,7 @@ const getCurrentWeatherData = async (city) => {
       handleError(ResponseCode);
     }
   } catch (error) {
-    console.log(error);
+    handleError(error);
   }
 };
 

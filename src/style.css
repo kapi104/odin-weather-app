@@ -241,3 +241,7 @@ aside {
 .invisible {
   display: none;
 }
+
+.disableInputs *:not(.alertBox *) {
+  pointer-events: none;
+}
