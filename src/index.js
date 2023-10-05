@@ -7,5 +7,5 @@ import displayData from './displayData';
 document.addEventListener('DOMContentLoaded', async () => {
   const weatherData = await getCurrentWeatherData('london');
   const weather = weatherFactory(weatherData);
-  displayData(weather)
+  displayData(weather);
 });

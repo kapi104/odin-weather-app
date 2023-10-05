@@ -1,6 +1,7 @@
+const displayCurrentWeather = (weather) => {};
 
 const displayData = (weather) => {
-  console.log(weather);
-}
+  displayCurrentWeather(weather);
+};
 
-export default displayData
+export default displayData;
