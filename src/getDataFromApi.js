@@ -6,7 +6,7 @@ const getCurrentWeatherData = async (city) => {
     let ResponseCode;
 
     const data = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=e3ed4efcf7394dceab5183635231909&q=${city}&days=3&aqi=no&alerts=no`,
+      `https://api.weatherapi.com/v1/forecast.json?key=e3ed4efcf7394dceab5183635231909&q=${city}&days=3&aqi=no&alerts=no`,
       { mode: 'cors' },
     ).then((Response) => {
       ResponseCode = Response.status;
